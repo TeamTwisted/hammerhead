@@ -437,3 +437,13 @@ obj-$(CONFIG_WALL_CLK_SYSFS) += wallclk_sysfs.o
 
 obj-y += fastchg.o
 obj-$(CONFIG_HAS_MACH_MEMUTILS) += memutils/
+
+ifdef CONFIG_MACH_MSM8975_HAMMERHEAD_STRICT_ALIASING
+CFLAGS_bam_dmux.o := -fno-strict-aliasing
+CFLAGS_ipc_router_smd_xprt.o := -fno-strict-aliasing
+CFLAGS_ipc_router.o := -fno-strict-aliasing
+CFLAGS_ipc_socket.o := -fno-strict-aliasing
+CFLAGS_msm_ipc_router_security.o := -fno-strict-aliasing
+CFLAGS_rpm_log.o := -fno-strict-aliasing
+endif
+
