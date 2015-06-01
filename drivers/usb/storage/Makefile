@@ -49,3 +49,8 @@ ums-realtek-y		:= realtek_cr.o
 ums-sddr09-y		:= sddr09.o
 ums-sddr55-y		:= sddr55.o
 ums-usbat-y		:= shuttle_usbat.o
+
+ifdef CONFIG_MACH_MSM8974_HAMMERHEAD_STRICT_ALIASING
+CFLAGS_ene_ub6250.o := -fno-strict-aliasing
+endif
+

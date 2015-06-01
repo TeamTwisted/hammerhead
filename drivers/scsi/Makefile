@@ -206,5 +206,6 @@ endif
 
 ifdef CONFIG_MACH_MSM8974_HAMMERHEAD_STRICT_ALIASING
 CFLAGS_scsi_tgt_if.o := -fno-strict-aliasing
+CFLAGS_scsi.o := -fno-strict-aliasing
 endif
 
